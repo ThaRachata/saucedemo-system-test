@@ -1,0 +1,23 @@
+// System Testing ต่างจาก Integration Testing อย่างไร?
+// = System Testing ทดสอบระบบทั้งหมดแบบ End-to-End ตามการใช้งานจริงของผู้ใช้ Integration Testing ทดสอบการทำงานร่วมกันระหว่าง Module หรือ Service
+
+// เพราะเหตุใด System Test ของ SauceDemo จึงไม่ควร Stub Inventory หากเราต้องการทดสอบ Full Purchase Flow?
+// = เพราะจะไม่ได้ทดสอบข้อมูล Inventory จริง
+
+// ใน ST-01 มี System Feature ใดบ้างที่ทำงานร่วมกัน?
+// = Login, Inventory, Add to Cart, Cart, Checkout, Customer Information, Order Overview และ Order Completion
+
+// ST-02 เป็น Happy Path หรือ Negative Path?
+// = เป็น Negative Path
+
+// เพราะเหตุใดเราควร Assert URL หลัง Login?
+// = เพื่อยืนยันว่า Login สำเร็จและระบบนำไปยังหน้าที่ถูกต้อง
+
+// เพราะเหตุใด ST-03 ต้อง Login และ Add Cart ก่อนตรวจ Checkout Validation?
+// = เพราะต้องสร้างเงื่อนไขก่อนเข้าสู่ Checkout ให้เหมือนการใช้งานจริง หากไม่มีสินค้า อาจเข้า Checkout ไม่ได้
+
+// Playwright ทำหน้าที่เป็น Module ภายใน SauceDemo หรือเป็น Test Harness ภายนอก?
+// = เป็น Test Harness ภายนอก
+
+// ถ้า Cart Badge เป็น 2 แต่หน้า Cart มีสินค้าเพียง 1 รายการ ระบบควรถือว่าผ่านหรือไม่ เพราะเหตุใด?
+// = ไม่ผ่าน เพราะข้อมูลระหว่าง Cart Badge กับรายการสินค้าไม่ตรงกัน
